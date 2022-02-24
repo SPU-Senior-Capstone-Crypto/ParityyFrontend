@@ -1,0 +1,174 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.nameHeader{
+  font-size: 48px;
+  text-align: center;
+  line-height: 1;
+
+}
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #FFDE59;
+  color: white;
+}
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(2,1,2,0.1);
+}
+
+.sectionTitle{
+  font-size: 30px;
+  font-family: cursive;
+  font-weight: bold;
+  margin-right: 180px;
+  color: red;
+}
+.underText{
+  font-size: 16px;
+  margin-bottom: 1px;
+  margin-left: 400px;
+
+  text-align: center;
+}
+.underText2{
+  font-size: 16px;
+  margin-bottom: 1px;
+  text-align: center;
+  margin-right: 400px;
+}
+
+.workTitle{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+.place{
+  font-weight: bold;
+  line-height: 1;
+}
+.center{
+  text-align: center;
+  font-family: cursive;
+}
+.grid{
+
+  display: grid;
+  grid-auto-rows: 100%;
+  grid-template-columns: 50% 50%;
+
+
+}
+.grids{
+  background-color: cornsilk;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.contactInfo{
+  background-color: antiquewhite;
+  width: 50%;
+  border: 2px solid antiquewhite;
+  padding: 50px;
+  margin-left: 622px;
+  text-align: center;
+}
+img.floatright{
+  float:right;
+  clear: both;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu1 {
+  float: left;
+  clear: both;
+}
+
+
+#menu1 p {
+  float: left;
+}
+.navbar-custom {
+  background-color: #FFBD4A;
+}
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.column {
+  margin-top: 15px;
+  float: left;
+  width: 35%;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
