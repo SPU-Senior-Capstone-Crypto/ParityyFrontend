@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type= "text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+
+    <title>Sign up page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<div class="signup">
+    <h1>Sign Up</h1>
+    <form id='signUp-form'>
+        <p>Username</p>
+        <input id = "name" type="text" name="name" placeholder="Enter username" required>
+
+        <p>Email Address</p>
+        <input id = "email" type="email" name="email" placeholder="Enter email address" required>
+
+        <p>Password</p>
+        <input id="pass" type="password" name="pass" placeholder="Enter Password" required ><br>
+
+        <p>Confirm Password</p>
+        <input id="confirmpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
+
+        <button class="button" type="submit">Register Account</button><br>
+
+        <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="../site/profile.html">Sign in</a></p>
+
+    </form>
+
+</div>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+<script src="firebaseInit.js"></script>
+<script src="auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+
+<!-- <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC_pM4BxQen_-SPZnRcx4jEm8QmkeS2Yvo",
+    authDomain: "login-example-1.firebaseapp.com",
+    projectId: "login-example-1",
+    storageBucket: "login-example-1.appspot.com",
+    messagingSenderId: "870204567504",
+    appId: "1:870204567504:web:e3f4e717b30f3fe22653d5",
+    measurementId: "G-8TWL299GC7"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  firebase.auth();
+  -->
+</body>
+</html>
