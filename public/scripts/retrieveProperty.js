@@ -7,7 +7,7 @@ function getProperty () {
             }
         }
 
-        let url = 'localhost:8080/api/property/' + params.id;
+        let url = 'http://localhost:80/api/property/' + params.id;
         xhttp.open('GET', url) //BUGBUG end point not created and only works for local env.
         xhttp.send();
     } else {
