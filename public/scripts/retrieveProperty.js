@@ -6,17 +6,16 @@ function getProperty () {
                 console.log(this.responseText);
             }
         }
-        body = JSON.stringify({id : params.id});
-        xhttp.open('POST', 'localhost:8080/api/property') //BUGBUG end point not created and only works for local env.
-        xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhttp.send(body);
-        // send post request
+
+        let url = 'localhost:8080/api/property/' + params.id;
+        xhttp.open('GET', url) //BUGBUG end point not created and only works for local env.
+        xhttp.send();
     } else {
         errorRedirect();
     }
 }
 
 function errorRedirect () {
-    console.error('error')
+    console.error('No id')
 }
 
