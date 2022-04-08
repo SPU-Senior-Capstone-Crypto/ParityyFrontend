@@ -6,7 +6,7 @@ function getProperty () {
             console.log(JSON.parse(this.responseText)[0]);
         }
     }
-    let url = 'http://localhost:80/api/property/' + params.id;
+    let url = 'http://localhost:3001/api/property/' + params.id;
 
     xhttp.open('GET', url, true) //BUGBUG end point not created and only works for local env.
     xhttp.send();
