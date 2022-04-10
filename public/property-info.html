@@ -8,18 +8,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>jon</title>
+      <title>Parityy</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- bootstrap css -->
       <link rel="stylesheet" href="css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style1.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
@@ -28,13 +26,40 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <script src='./scripts/urlParams.js'></script>
+      <script src='./scripts/retrieveProperty.js'></script>
    </head>
    <!-- body -->
    <body class="main-layout">
       <!-- loader  -->
-      <!-- <div class="loader_bg">
+      <div class="loader_bg">
          <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-      </div> -->
+      </div>
+
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: mediumpurple">
+         <a class="navbar-brand" href="../site/home.html"> Parityy </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+     
+         <div class='collapse navbar-collapse'>
+     
+             <span class='nav-item'>
+                             <Link class= "nav-link"> <button type="button" variant='contained' class="btn btn-primary"><a href="login.html">Login</a></button></Link>
+                              </span>
+             <span style="margin-right: 2px">                                                                                 </span>
+             <span class='nav-item'>
+                            <Link class= "nav-link"> <button type="button" variant="contained" class="btn btn-primary"><a href="signup.html">Sign up</a></button></Link>
+                             </span>
+         </div>
+     
+     
+     
+     
+     
+     
+     </nav>
 
       <section class="banner_main">
          <div class="container">
@@ -42,13 +67,13 @@
                <div class="col-md-12 ">
                   <div class="text-bg">
                      <!-- Property title -->
-                     <h1>FARMING COMPANY</h1>
+                     <h1></h1>
 
                      <!-- Address/high level info -->
-                     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it</p>
+                     <p></p>
                      
                      <!-- Purchase button w/ price -->
-                     <a href="#">Discover</a>
+                     <a href="#">BUY ME</a>
                   </div>
                </div>
             </div>
@@ -64,17 +89,17 @@
             <div class="row">
                <div class="col-md-4">
                   <div class="box_text">
-                     <figure><img src="images/img1.jpg" alt="#"/></figure>
+                     <figure><img id = "img1" src="" alt="#"/></figure>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text">
-                     <figure><img src="images/img2.jpg" alt="#"/></figure>
+                     <figure><img id = "img2" src="" alt="#"/></figure>
                   </div>
                </div>
                <div class="col-md-4">
                   <div class="box_text">
-                     <figure><img src="images/img3.jpg" alt="#"/></figure>
+                     <figure><img id = "img3" src="" alt="#"/></figure>
                   </div>
                </div>
             </div>
@@ -91,7 +116,7 @@
                   <div class="titlepage">
 
                      <!-- Eye grabber -->
-                     <h2>World’s Hottest Destinations <br>for Vegans</h2>
+                     <h2></h2>
                   </div>
                </div>
                <div class="col-md-7">
@@ -99,7 +124,7 @@
 
 
                      <!-- Info -->
-                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined </p>
+                     <p></p>
                   </div>
                </div>
             </div>
@@ -118,5 +143,10 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
    </body>
+   <script>
+      console.log("getting property");
+      getProperty();
+      console.log("Property Got")
+  </script>
 </html>
 
