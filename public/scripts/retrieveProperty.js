@@ -5,13 +5,24 @@ function getProperty () {
         if (this.status == 200 && this.readyState == 4){
             buildPage(JSON.parse(this.responseText)[0]);
         }
+        if (this.status == 302 && this.readyState == 4){    // if no/wrong id given reroute to index or search page.
+            location.href = 'index.html';
+        }
     }
-    let url = 'http://localhost:3001/api/property/' + params.id;
-
+    let id = '';
+    if (params.id){
+        id += '/' + params.id;
+    }
+    let url = 'http://localhost:3001/api/property' + id;
+    console.log(url);
     xhttp.open('GET', url, true) //BUGBUG end point not created and only works for local env.
     xhttp.send();
 }
 
+/**
+ * Populates the page with the property specific stuff
+ * @param {JSON} payload property meta treieved from db
+ */
 function buildPage (payload) {
     let imgs = JSON.parse(payload.image_meta);
     let desc = JSON.parse(payload.desc_meta);
