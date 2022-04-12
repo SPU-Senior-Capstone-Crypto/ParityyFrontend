@@ -44,11 +44,11 @@
                         <div class="col-8">
                             Purchase
                         </div>
-                        <div class="col-2">
+                        <div class="col-4">
                             <div class="row">
-                                <div class="col">
+                                <div class="col" id = 'metaCheck'>
                                     <!-- <img src="./icon/fox.png"> -->
-                                    <button type="button" class="btn btn-warning">Connect Metamask</button>
+                                    <div class="alert alert-warning">Wrong Chain</div>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,10 @@
                     </div>
                     <div class="row">
                         <div class="col-8">
-                            <p>discaliamers*</p>
+                            <p>Disclaimer*<span>
+                                <br>The transaction is on the Ropsten Test Network which utilizes Test Eth which has no monetary value.<br>
+                                This form is mean to setup the transaction variables while the transaction itself is executed in Metamask. The user may change parameters in Metamask, but the value must equal the value on this screen for the transaction to be considered valid.
+                            </span></p>
                         </div>
                         <div class="col-4">
                             <p><u>Price est</u></p>
@@ -91,4 +94,10 @@
             </div>
         </div>
     </body>
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="./scripts/purchase.js"></script>
 </html>
