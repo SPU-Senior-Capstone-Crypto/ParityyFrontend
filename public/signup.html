@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -20,24 +20,31 @@
 
 
 </head>
-<body>
+<body style="background: #fefefe">
 
-<div class="signup">
-    <h1>Sign Up</h1>
+<div class="signup" style="height: 830px">
+
+    <img src="../images/Logo.png" alt="Snow" style="width:100%; height: 15%; margin-left: 35px" >
+    <h1 style="font-family: Rokkitt; margin-left: 150px; font-size: 30px">Sign Up</h1>
+
+
     <form id='signUp-form'>
-        <p>Username</p>
-        <input id = "name" type="text" name="name" placeholder="Enter username" required>
+        <label for="firstname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> First Name:</label>
+        <input id = "firstname" type="text" name="name" placeholder="Enter First Name" required>
 
-        <p>Email Address</p>
-        <input id = "email" type="email" name="email" placeholder="Enter email address" required>
+        <label for="lastname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> Last Name:</label>
+        <input id = "lastname" type="text" name="name" placeholder="Enter Last name" required>
 
-        <p>Password</p>
-        <input id="pass" type="password" name="pass" placeholder="Enter Password" required ><br>
+        <label for="email" style="margin-top: 2px"> <i class="fa fa-envelope" aria-hidden="true"></i> Email:</label>
+        <input id = "email" type="email" name="email" placeholder="Enter Email" required>
 
-        <p>Confirm Password</p>
-        <input id="confirmpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
+        <label for="password" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Password:</label>
+        <input id="password" type="password" name="pass" placeholder="Enter Password" required ><br>
 
-        <button class="button" type="submit">Register Account</button><br>
+        <label for="reenterpass" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Re-enter Password:</label>
+        <input id="reenterpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
+
+        <button class="button" type="submit" style="background-color: #6f42c1">Register Account</button><br>
 
         <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="../site/profile.html">Sign in</a></p>
 
@@ -55,22 +62,6 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 
-<!-- <script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyC_pM4BxQen_-SPZnRcx4jEm8QmkeS2Yvo",
-    authDomain: "login-example-1.firebaseapp.com",
-    projectId: "login-example-1",
-    storageBucket: "login-example-1.appspot.com",
-    messagingSenderId: "870204567504",
-    appId: "1:870204567504:web:e3f4e717b30f3fe22653d5",
-    measurementId: "G-8TWL299GC7"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  firebase.auth();
-  -->
+
 </body>
 </html>
