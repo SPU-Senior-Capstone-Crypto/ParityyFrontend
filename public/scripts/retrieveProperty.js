@@ -1,3 +1,5 @@
+getProperty();
+
 function getProperty () {
     console.log("Getting Property")
     let xhttp = new XMLHttpRequest();
@@ -14,10 +16,10 @@ function getProperty () {
         id += '/' + params.id;
     }
     let url = 'http://localhost:3001/api/property' + id;
-    console.log(url);
     xhttp.open('GET', url, true) //BUGBUG end point not created and only works for local env.
     xhttp.send();
 }
+
 
 /**
  * Populates the page with the property specific stuff
@@ -26,8 +28,12 @@ function getProperty () {
 function buildPage (payload) {
     let imgs = JSON.parse(payload.image_meta);
     let desc = JSON.parse(payload.desc_meta);
-    console.log(imgs);
-    console.log(desc);
+    // console.log(imgs);
+    // console.log(desc);
+
+    // Set buy button link
+    let buyLink = "/purchase?id=" + params.id;
+    $("#buyBtn").attr('href', buyLink);
 
     // Set banner back image
     $(".banner_main").css( 

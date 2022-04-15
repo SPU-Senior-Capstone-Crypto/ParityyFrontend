@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:3000/purchase?id=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Purchase Confirmation</title>
+         <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="./Purchase Confirmation_files/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="./Purchase Confirmation_files/style1.css">
+      <link rel="stylesheet" href="./Purchase Confirmation_files/purchase.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="./Purchase Confirmation_files/responsive.css">
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="./Purchase Confirmation_files/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="./Purchase Confirmation_files/font-awesome.css">
+      <link rel="stylesheet" href="./Purchase Confirmation_files/jquery.fancybox.min.css" media="screen">
+      <script src="./Purchase Confirmation_files/urlParams.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: mediumpurple">
+            <a class="navbar-brand" href="http://localhost:3000/site/home.html"> Parityy </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse">
+        
+                <span class="nav-item">
+                                <link class="nav-link"> <button type="button" variant="contained" class="btn btn-primary"><a href="http://localhost:3000/login.html">Login</a></button>
+                                 </span>
+                <span style="margin-right: 2px">                                                                                 </span>
+                <span class="nav-item">
+                               <link class="nav-link"> <button type="button" variant="contained" class="btn btn-primary"><a href="http://localhost:3000/signup.html">Sign up</a></button>
+                                </span>
+            </div>
+        </nav>
+        <div class="purchase-container">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-8">
+                            Purchase
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col" id="metaCheck"><img src="./Purchase Confirmation_files/fox.png" height="50" width="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div id="priceOut" class="col-8">Price per Share<br><strong>0.1</strong> eth</div>
+                        <div class="col-4">
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">Speed</div>
+                        <div class="col-4">
+                            <select name="gas" id="&#39;gas">
+                                <option value="slow">Slow</option>
+                                <option value="medium" selected="">Regular</option>
+                                <option value="fast">Fast</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Disclaimer*<span>
+                                <br>The transaction is on the Ropsten Test Network which utilizes Test Eth which has no monetary value.<br>
+                                This form is mean to setup the transaction variables while the transaction itself is executed in Metamask. The user may change parameters in Metamask, but the value must equal the value on this screen for the transaction to be considered valid.
+                            </span></p>
+                        </div>
+                        <div class="col-4">
+                            <p><u>Price est</u></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-6 ">
+                            <button type="button" class="btn btn-success">Complete in Metamask</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Javascript files-->
+    <script src="./Purchase Confirmation_files/jquery.min.js"></script>
+    <script src="./Purchase Confirmation_files/popper.min.js"></script>
+    <script src="./Purchase Confirmation_files/bootstrap.bundle.min.js"></script>
+    <script src="./Purchase Confirmation_files/jquery-3.0.0.min.js"></script>
+    <script src="./Purchase Confirmation_files/purchase.js"></script>
+</body></html>

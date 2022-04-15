@@ -1,0 +1,10 @@
+/* Purchase card styling */
+
+.purchase-container{
+    align-self: center;
+    width : 40%;
+    left:30%;
+    right:30%;
+    position: absolute;
+    padding-top: 5%;
+}
