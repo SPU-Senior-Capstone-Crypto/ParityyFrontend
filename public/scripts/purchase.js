@@ -164,6 +164,8 @@ $("#sendEth").on('click', () => {
       console.log("success");
       // TODO handle successful transaction
       //document.getElementById('output').innerHTML = 'Transaction Sucess';
+      $("#receiptOut").html(`Successful Transaction<br>Receipt Hash:<br>${contract.hash}`);
+      $("#receiptFoot").html(`<button type="button" onclick="window.location.href='/'" class="btn btn-primary">Return Home</button>`);
     } else {
       //document.getElementById('output').innerHTML = 'Transaction Failed';
     }
