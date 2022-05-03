@@ -27,8 +27,7 @@
     <img src="../images/Logo.png" alt="Snow" style="width:100%; height: 15%; margin-left: 35px" >
     <h1 style="font-family: Rokkitt; margin-left: 150px; font-size: 30px">Sign Up</h1>
 
-
-    <form id='signUp-form'>
+    <form id="input-form">
         <label for="firstname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> First Name:</label>
         <input id = "firstname" type="text" name="name" placeholder="Enter First Name" required>
 
@@ -44,10 +43,9 @@
         <label for="reenterpass" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Re-enter Password:</label>
         <input id="reenterpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
 
-        <button class="button" type="submit" style="background-color: #6f42c1">Register Account</button><br>
+        <button class="button" type="submit" id ="registerBtn" style="background-color: #6f42c1">Register Account</button><br>
 
         <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="../site/profile.html">Sign in</a></p>
-
     </form>
 
 </div>
@@ -55,13 +53,11 @@
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
-<script src="firebaseInit.js"></script>
-<script src="auth.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
-
+<script src="./scripts/login.js"></script>
 
 </body>
 </html>
