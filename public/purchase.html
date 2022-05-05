@@ -116,7 +116,11 @@
           </button>
         </div>
         <div id="receiptOut" class="modal-body">
-            Receipt Confirmation may take up to 30 seconds, depending on network traffic.
+            <div class="row" id="pendingRow">
+                <p>Receipt Confirmation may take up to 30 seconds, depending on network traffic.</p>
+            </div>
+            <div class ="row" id = "successRow"></div>
+            <div class="row" id="hashRow"></div>
         </div>
         <div id="receiptFoot" class="modal-footer">
         </div>
@@ -129,6 +133,6 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="./scripts/purchase.js"></script>
     <script src="./scripts/login.js"></script>
+    <script src="./scripts/purchase.js"></script>
 </html>

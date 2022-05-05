@@ -1,3 +1,7 @@
+if(getSSID() < 0){
+  window.location.href = "/"
+}
+
 setup();
 let pricePerShare = 0;
 let accounts = [];
@@ -162,9 +166,28 @@ $("#sendEth").on('click', () => {
     let targetVal = '0x' + money;
     if (blockVal === targetVal){
       console.log("success");
-      // TODO handle successful transaction
-      //document.getElementById('output').innerHTML = 'Transaction Sucess';
-      $("#receiptOut").html(`Successful Transaction<br>Receipt Hash:<br>${contract.hash}`);
+
+      //TODO
+      // ajax post transaction data to transaction endpoint
+      
+      //format output hash
+      let hash = contract.hash
+      let hashStr = hash.toString();
+      let hashOut = hashStr.substring(0, 6) + "..." + hashStr.substring(hashStr.length - 4);
+
+      // remove pending div
+      $('#pendingRow').remove();
+
+      // update success Row
+      $('#successRow')
+        .append(`<p>Successful Transaction<br>Result:</p>`)
+
+      // update hash row with hash and copy btn
+      $('#hashRow')
+        .append(`<div id="hashCol" class="col-sm"><p>${hashOut}</p></div>`)
+        .append(`<div class="col-sm"><button type="button" id="copyBtn" class="btn btn-light" onclick="navigator.clipboard.writeText(${hashStr})">Copy to Clipboard</button></div>`)
+
+      // return home btn
       $("#receiptFoot").html(`<button type="button" onclick="window.location.href='/'" class="btn btn-primary">Return Home</button>`);
     } else {
       //document.getElementById('output').innerHTML = 'Transaction Failed';
