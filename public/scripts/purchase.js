@@ -1,5 +1,5 @@
 if(getSSID() < 0){
-  window.location.href = "/"
+  window.location.href = "/login.html"
 }
 
 setup();
@@ -165,7 +165,7 @@ $("#sendEth").on('click', () => {
     let blockVal = contract.value;
     let targetVal = '0x' + money;
     if (blockVal === targetVal){
-      console.log("success");
+      //console.log(contract);
 
       //TODO
       // ajax post transaction data to transaction endpoint
@@ -185,10 +185,37 @@ $("#sendEth").on('click', () => {
       // update hash row with hash and copy btn
       $('#hashRow')
         .append(`<div id="hashCol" class="col-sm"><p>${hashOut}</p></div>`)
-        .append(`<div class="col-sm"><button type="button" id="copyBtn" class="btn btn-light" onclick="navigator.clipboard.writeText(${hashStr})">Copy to Clipboard</button></div>`)
+        .append(`<div class="col-sm"><button type="button" id="copyBtn" class="btn btn-light" onclick="navigator.clipboard.writeText('${hashStr}')">Copy to Clipboard</button></div>`)
 
       // return home btn
       $("#receiptFoot").html(`<button type="button" onclick="window.location.href='/'" class="btn btn-primary">Return Home</button>`);
+
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.status == 200 && this.readyState == 4){
+          console.log("Successful transaction")
+        }
+      }
+
+      // create transaction body
+      let body = {
+        shares : $("#sharesIn").val(),
+        value : contract.value.toString(),
+        hash : hashStr,
+        sender : contract.from.toString(),
+        recipient : contract.to.toString(),
+        property_id : params.id,
+        ssid : getSSID()
+      }
+
+      console.log(body)
+
+      // open and send POST request
+      let url = 'http://localhost:3001/api/transaction'
+      xhttp.open('POST', url, true);
+      xhttp.setRequestHeader('Content-type', 'application/json');
+      xhttp.send(JSON.stringify(body));
+
     } else {
       //document.getElementById('output').innerHTML = 'Transaction Failed';
     }
