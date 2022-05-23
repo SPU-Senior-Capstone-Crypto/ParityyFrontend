@@ -85,7 +85,7 @@ function getTransactions () {
 
 function buildTransaction (t) {
     const container = $('.list-container');
-    container.append(
+    container.prepend(
         `<div class="row">
             <div class="col">
             ${t.hash}

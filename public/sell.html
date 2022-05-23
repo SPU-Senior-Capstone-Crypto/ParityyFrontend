@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Sell Confirmation</title>
+            <!-- mobile metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" href="css/style1.css">
+        <link rel="stylesheet" href="css/purchase.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        <script src="./scripts/urlParams.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black">
+            <a class="navbar-brand" href="/" style="color: #fefefe"> Parityy </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class='collapse navbar-collapse'>
+                <ul class="navbar-nav mr-auto">
+                </ul>
+        
+                <span class='nav-item'>
+                    <Link class= "nav-link"> 
+                        <button id = "accountBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
+                            <a href="login.html">Login</a>
+                        </button>
+                    </Link>
+                </span>
+                <span style="margin-right: 2px"></span>
+                <span class='nav-item'>
+                    <Link class= "nav-link" > 
+                        <button id = "accountOptionBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
+                            <a href="signup.html">Sign up</a>
+                        </button>
+                    </Link>
+                </span>
+            </div>
+        </nav>
+        <div class="sell-container">
+            <div class = "card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-8" id = 'sell-title'>
+                            Sell
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col" id = 'metaCheck'>
+                                    <!-- <img src="./icon/fox.png"> -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div id = "priceOut" class="col-8">Price</div>
+                        <div class="col-4">
+                            <input placeholder="Shares To Sell" id ='sharesIn' type="number">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">Speed</div>
+                        <div class="col-4">
+                            <select name="gas" id="gas">
+                                <option value="23.30701929">Slow</option>
+                                <option value="28.28502412" selected>Regular</option>
+                                <option value="29.52568991">Fast</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div id="estGas" class="col-4">
+                            <p>Est. gas</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Disclaimer*<span>
+                                <br>The transaction is on the Ropsten Test Network which utilizes Test Eth which has no monetary value.<br>
+                                This form is mean to setup the transaction variables while the transaction itself is executed on secure servers using the default network provider.
+                            </span></p>
+                        </div>
+                        <div id = "estOut" class="col-4">
+                            <p><u>Price est</u></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-6"></div>
+                        <div class="col-6 ">
+                            <button type="button" class="btn btn-success" id="sendEth" data-toggle="modal" data-target="#exampleModal" disabled>Complete Transaction</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+  <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Transaction Receipt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="receiptOut" class="modal-body">
+                <div class="row" id="pendingRow">
+                    <p>Receipt Confirmation may take up to 30 seconds, depending on network traffic.</p>
+                </div>
+                <div class ="row" id = "successRow"></div>
+                <div class="row" id="hashRow"></div>
+            </div>
+            <div id="receiptFoot" class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/sell.js"></script>
+</html>

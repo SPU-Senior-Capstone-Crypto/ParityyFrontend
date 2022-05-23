@@ -28,7 +28,7 @@ $("#gas").change( () => {
 function updatePricing () {
     let numShares = $("#sharesIn").val();
     $("#estGas").html(`Est. Gas fee: ${Number($("#gas").val())}`);  // Output gas est
-    $('#estOut p').html(`Est. Price: <u>${(pricePerShare * numShares).toFixed(2)}`);    // output total est
+    $('#estOut p').html(`Est. Price: <u>${(Number(pricePerShare) * numShares / 1e18).toFixed(2)}`);    // output total est
     if (numShares <= 0){
         $("#sendEth").attr('disabled', true);
     } else {
