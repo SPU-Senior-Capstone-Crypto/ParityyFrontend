@@ -58,7 +58,7 @@ function buildCard (prop) {
             <div class="card-body">
                 <h5 class="card-title">${prop.property_name}</h5>
                 <p class="card-text">${meta.summary}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="/sell?id=${prop.property_id}" class="btn btn-primary">Sell</a>
             </div>
         </div>
         `
