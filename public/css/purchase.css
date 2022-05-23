@@ -17,3 +17,7 @@ span {
     font-size: 9px;
     line-height: 5px;
 }
+
+#hashCol p{
+    text-align: right;
+}

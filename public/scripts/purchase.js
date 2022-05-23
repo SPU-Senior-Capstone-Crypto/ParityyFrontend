@@ -1,3 +1,7 @@
+if(getSSID() < 0){
+  window.location.href = "/login.html"
+}
+
 setup();
 let pricePerShare = 0;
 let accounts = [];
@@ -24,7 +28,7 @@ $("#gas").change( () => {
 function updatePricing () {
     let numShares = $("#sharesIn").val();
     $("#estGas").html(`Est. Gas fee: ${Number($("#gas").val())}`);  // Output gas est
-    $('#estOut p').html(`Est. Price: <u>${(pricePerShare * numShares).toFixed(2)}`);    // output total est
+    $('#estOut p').html(`Est. Price: <u>${(Number(pricePerShare) * numShares / 1e18).toFixed(2)}`);    // output total est
     if (numShares <= 0){
         $("#sendEth").attr('disabled', true);
     } else {
@@ -161,11 +165,57 @@ $("#sendEth").on('click', () => {
     let blockVal = contract.value;
     let targetVal = '0x' + money;
     if (blockVal === targetVal){
-      console.log("success");
-      // TODO handle successful transaction
-      //document.getElementById('output').innerHTML = 'Transaction Sucess';
-      $("#receiptOut").html(`Successful Transaction<br>Receipt Hash:<br>${contract.hash}`);
+      //console.log(contract);
+
+      //TODO
+      // ajax post transaction data to transaction endpoint
+      
+      //format output hash
+      let hash = contract.hash
+      let hashStr = hash.toString();
+      let hashOut = hashStr.substring(0, 6) + "..." + hashStr.substring(hashStr.length - 4);
+
+      // remove pending div
+      $('#pendingRow').remove();
+
+      // update success Row
+      $('#successRow')
+        .append(`<p>Successful Transaction<br>Result:</p>`)
+
+      // update hash row with hash and copy btn
+      $('#hashRow')
+        .append(`<div id="hashCol" class="col-sm"><p>${hashOut}</p></div>`)
+        .append(`<div class="col-sm"><button type="button" id="copyBtn" class="btn btn-light" onclick="navigator.clipboard.writeText('${hashStr}')">Copy to Clipboard</button></div>`)
+
+      // return home btn
       $("#receiptFoot").html(`<button type="button" onclick="window.location.href='/'" class="btn btn-primary">Return Home</button>`);
+
+      let xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.status == 200 && this.readyState == 4){
+          console.log("Successful transaction")
+        }
+      }
+
+      // create transaction body
+      let body = {
+        shares : $("#sharesIn").val(),
+        value : contract.value.toString(),
+        hash : hashStr,
+        sender : contract.from.toString(),
+        recipient : contract.to.toString(),
+        property_id : params.id,
+        ssid : getSSID()
+      }
+
+      console.log(body)
+
+      // open and send POST request
+      let url = 'http://localhost:3001/api/transaction'
+      xhttp.open('POST', url, true);
+      xhttp.setRequestHeader('Content-type', 'application/json');
+      xhttp.send(JSON.stringify(body));
+
     } else {
       //document.getElementById('output').innerHTML = 'Transaction Failed';
     }
