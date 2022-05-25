@@ -1,0 +1,572 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.nameHeader{
+  font-size: 48px;
+  text-align: center;
+  line-height: 1;
+
+}
+.header {
+  padding: 5px;
+  text-align: center;
+  background: #FFDE59;
+  color: white;
+}
+.container{
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 32px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(2,1,2,0.1);
+}
+
+.sectionTitle{
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 180px;
+}
+.underText{
+  font-size: 16px;
+  margin-bottom: 1px;
+  margin-left: 400px;
+
+  text-align: center;
+}
+.underText2{
+  font-size: 16px;
+  margin-bottom: 1px;
+  text-align: center;
+  margin-right: 400px;
+}
+
+.workTitle{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+.place{
+  font-weight: bold;
+  line-height: 1;
+}
+.center{
+  text-align: center;
+  font-family: cursive;
+}
+.grid{
+
+  display: grid;
+  grid-auto-rows: 100%;
+  grid-template-columns: 50% 50%;
+
+
+}
+.grids{
+  background-color: cornsilk;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.contactInfo{
+  background-color: antiquewhite;
+  width: 50%;
+  border: 2px solid antiquewhite;
+  padding: 50px;
+  margin-left: 622px;
+  text-align: center;
+}
+img.floatright{
+  float:right;
+  clear: both;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.menu1 {
+  float: left;
+  clear: both;
+}
+
+
+#menu1 p {
+  float: left;
+}
+.navbar-custom {
+  background-color: #FFBD4A;
+}
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+.column {
+  margin-top: 15px;
+  float: left;
+  width: 35%;
+  padding: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'kumbh Sans', sans-serif;
+}
+.navbar{
+  background: rgb(0, 157, 209);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  margin: 0% 0% 0% 0%;
+}
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-left: 11%;
+  padding: 0 50px;
+  font-size: 18px;
+}
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin: auto;
+}
+
+.navbar__links{
+  color: #fff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+
+.navbar__btn{
+
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-left: 100px;
+}
+.btn{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.btn:hover{
+  font-weight: bold;
+}
+body{
+  margin: 0;
+  padding:0;
+  background-color: whitesmoke;
+}
+
+.signup{
+  width: 500px;
+  height: 500px;
+  margin-top: 200px;
+
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.signup input[type="email"], input[type="password"], input[type="text"]{
+  width: 100%;
+  height: 60px;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: 1px solid grey;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: grey;
+}
+.signup input[type="submit"], .button{
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 60px;
+  background: deepskyblue;
+  color: white;
+  border-radius: 6px;
+  font-size: 17px;
+
+  margin-top: 30px;
+
+}
+
+.signup p{
+  margin-top: 20px;
+  color: grey;
+  margin-bottom: 5px;
+
+}
+.p  {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+
+
+
+}
+.signup a{
+  text-decoration: none;
+  font-weight: normal;
+
+}
+
+.left {
+  float: left;
+  padding: 0 5px 5px 0;
+
+
+}
+h3 {
+  color: black;
+  font-family: "Times New Roman";
+  font-size: medium;
+
+}
+
+.about h2{
+  font-size: 60px;
+  font-family: "Times New Roman";
+  font-weight: bold;
+  color: black;
+}
+.about h1{
+  color: dodgerblue;
+  font-family: "Times New Roman";
+
+  font-size: 30px;
+  font-weight: bold;
+}
+.about p{
+  font-family: Times New Roman;
+  font-size: 27px;
+}
+
+body {  animation-duration: 3s;
+  animation-name: fadeIn;
+  list-style-type: none;
+}
+
+  .index-subhead {
+    font-size: 250%;
+  }
+  .index-content {
+    font-size: 150%;
+  }
+  .about img {
+    width: fit-content;
+    height:fit-content;
+  }
+
+li {
+  list-style-type: none;
+}
+
+a { color:rgb(19, 18, 18);
+  transition:color .5s;
+  text-decoration: none;
+}
+
+a:hover{ color:rgb(217, 228, 233);
+  list-style-type: none;
+  text-decoration: none;}
+
+section h2 {margin-left: 20px; font-weight: 700;}
+
+.title{
+
+  align-items: center;
+  font-family: 'Arvo';
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 40px;
+  text-align: center;
+}
+#Sidebar-Nav a {position:absolute;
+  left: -7%;
+  transition: 0.3s;
+  padding: 1% 1% 1% 1%;
+  border-radius: 0 5px 5px 0;
+  width: 10%;
+  font-weight: bold;
+  color: whitesmoke;}
+
+#Sidebar-Nav a:hover {left: 0}
+
+.forum{
+
+
+  margin-top: 40px;
+  margin-left: 22%;
+  width: 900px;
+  height: 300px;
+
+}
+
+textarea{
+  width: 80%;
+  height: 80px;
+  margin-top: 10%;
+  margin-left: 10%;
+
+  border-width: 4px;
+
+}
+
+.forum input[type="submit"]{
+  border-radius: 50%;
+  width:100px;
+  margin-left: 80%;
+  margin-top: 20px;
+  color: #fff;
+  background-color: blue;
+  font-size: 30px;
+  border: none;
+  outline: none;
+
+}
+
+.table_1 {
+  width: 80%;
+}
+
+.table{
+  margin-left: 300px;
+  margin-top: 100px;
+
+}
+th, td{
+  border: none;
+  border-collapse: collapse;
+}
+table{
+  width: 60%;
+}
+
+.center{
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+
+
+}
+
+.table h1{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+
+
+
+
+
+}
+
+.forum-menu h2{
+  font-family: 'Arvo';
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 40px;
+
+}
+
+.forum-menu p{
+  font-family: 'Arvo';
+  text-align: center;
+  font-size: 17px;
+  margin-top: 40px;
+}
+
+.content ul {
+  list-style-type: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.content li {
+  padding: 10px;
+  background: white;
+  color: black;
+  /* position: relative; */
+  border: 0.5px solid #e6e6e6;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+
+
+
+}
+.content{
+
+  padding: 100px;
+
+
+}
+
+.content li span:nth-child(1){
+  text-align: right;
+
+  padding-left: 0px;
+  padding-right: 0px;
+
+
+
+}
+
+.content li span:nth-child(2){
+
+
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+
+.content li span:nth-child(3){
+
+
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
+
+.content button{
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  width: 125px;
+  height: 50px;
+  margin-top: 20px;
+  background: rgb(0, 157, 209);
+  color: white;
+  font-size: 25px;
+  margin-left: 1025px;
+
+}
+
+
+
+.content li span{
+  display: block;
+
+
+}
+
+.content div{
+  color:rgb(0, 157, 209);
+}
+.forum ::placeholder{
+
+  font-size: 30px;
+  margin-left: 15px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.button_1{
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+  background: rgb(0, 157, 209);
+  color: white;
+  font-size: 25px;
+  margin-left: 720px;
+
+
+}
