@@ -37,6 +37,18 @@ function getCards () {
             for (let i in res){
                 buildCard(res[i]);
             }
+            for (let i in res){
+                buildCard(res[i]);
+            }
+            for (let i in res){
+                buildCard(res[i]);
+            }
+            for (let i in res){
+                buildCard(res[i]);
+            }
+            for (let i in res){
+                buildCard(res[i]);
+            }
         }
     }
 

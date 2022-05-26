@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3000/profile.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="./Profile_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Profile_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./Profile_files/style.css">
+    <link rel="stylesheet" href="./Profile_files/profile.css">
+
+    <script src="./Profile_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./Profile_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="./Profile_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./Profile_files/chart.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black">
+        <a class="navbar-brand" href="http://localhost:3000/" style="color: #fefefe"> Parityy </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+            </ul>
+    
+            <span class="nav-item">
+                <link class="nav-link"> 
+                    <button id="accountBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1"><a href="http://localhost:3000/profile.html">Account</a></button>
+                
+            </span>
+            <span style="margin-right: 2px"></span>
+            <span class="nav-item">
+                <link class="nav-link"> 
+                    <button id="accountOptionBtn" type="button" class="btn btn-light" style="background-color: black; border-color: black; color: lightgrey;">Logout</button>
+                
+            </span>
+        </div>
+    </nav>
+    <div class="header-container">
+        <div class="row">
+            <div class="col col-md-auto" id="balanceCol-title">
+                <p>Total Balance: <span>9</span> eth.</p>
+            </div>
+            <div class="col col-md-auto" id="sharesCol-title">
+                <p>Total Shares Owned: <span>90</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="chart-container">
+        <div class="chart">
+            <canvas id="balance-chart" width="2280" height="1140" style="display: block; box-sizing: border-box; height: 570px; width: 1140px;"></canvas>
+        </div>
+    </div>
+    <div class="row segment">
+        <p>Properties Owned</p>
+    </div>
+    <div class="cards-container">
+
+    <div class="card property" style="width: 18rem;">
+            <img class="card-img-top" src="./Profile_files/b1-banner.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">test_prop</h5>
+                <p class="card-text">Downtown reclaimed multi-purpose building. Perfect spot for local cafes and shops while boasting a modern feel on the inside for any and all businesses</p>
+                <a href="http://localhost:3000/sell?id=1" class="btn btn-primary">Sell</a>
+            </div>
+        </div>
+        <div class="card property" style="width: 18rem;">
+            <img class="card-img-top" src="./Profile_files/b1-banner.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">test_prop</h5>
+                <p class="card-text">Downtown reclaimed multi-purpose building. Perfect spot for local cafes and shops while boasting a modern feel on the inside for any and all businesses</p>
+                <a href="http://localhost:3000/sell?id=1" class="btn btn-primary">Sell</a>
+            </div>
+        </div>
+        <div class="card property" style="width: 18rem;">
+            <img class="card-img-top" src="./Profile_files/b1-banner.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">test_prop</h5>
+                <p class="card-text">Downtown reclaimed multi-purpose building. Perfect spot for local cafes and shops while boasting a modern feel on the inside for any and all businesses</p>
+                <a href="http://localhost:3000/sell?id=1" class="btn btn-primary">Sell</a>
+            </div>
+        </div>
+        <div class="card property" style="width: 18rem;">
+            <img class="card-img-top" src="./Profile_files/b1-banner.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">test_prop</h5>
+                <p class="card-text">Downtown reclaimed multi-purpose building. Perfect spot for local cafes and shops while boasting a modern feel on the inside for any and all businesses</p>
+                <a href="http://localhost:3000/sell?id=1" class="btn btn-primary">Sell</a>
+            </div>
+        </div>
+        <div class="card property" style="width: 18rem;">
+            <img class="card-img-top" src="./Profile_files/b1-banner.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">test_prop</h5>
+                <p class="card-text">Downtown reclaimed multi-purpose building. Perfect spot for local cafes and shops while boasting a modern feel on the inside for any and all businesses</p>
+                <a href="http://localhost:3000/sell?id=1" class="btn btn-primary">Sell</a>
+            </div>
+        </div>
+        </div>
+    <div class="row segment">
+        <p>Transaction History</p>
+    </div>
+    <div class="list-container"><div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Sell: 2 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.2</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    0x3640c85a722c78dafc963306920f64159bc59dc2b9d4df1fd28c3d87ce8465e5
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/1/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/3/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/3/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/3/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/3/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/2/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    5/2/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    4/0/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    4/0/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 10 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.001</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    testHash
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    4/0/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 1 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.1</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    0x527abc2980e74e763bf69fefceeaa8b3fac791849ded9a4f93183551535384aa
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    3/4/2022
+                </div>
+            </div>
+        </div>
+        <div class="transaction">
+            <div class="row">
+                <div class="col" id="nameCol">
+                test_prop
+                </div>
+                <div class="col-md-3" id="sharesCol">
+                Purchase: 1 shares
+                </div>
+                <div class="col col-md-2" id="ethCol">
+                    <span>0.1</span> eth.
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    0x527abc2980e74e763bf69fefceeaa8b3fac791849ded9a4f93183551535384aa
+                </div>
+                <div class="col">
+                </div>
+                <div class="col" id="dateCol">
+                    1/1/2022
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <script src="./Profile_files/login.js"></script>
+    <script src="./Profile_files/profile.js"></script>
+</body></html>
