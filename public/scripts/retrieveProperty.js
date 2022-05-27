@@ -15,7 +15,7 @@ function getProperty () {
     if (params.id){
         id += '/' + params.id;
     }
-    let url = 'http://localhost:3001/api/property' + id;
+    let url =  getAjaxRoute() + '/api/property' + id;
     xhttp.open('GET', url, true) //BUGBUG end point not created and only works for local env.
     xhttp.send();
 }

@@ -21,7 +21,7 @@ function getChart () {
         }
     }
 
-    let url = 'http://localhost:3001/api/account/chart';
+    let url =  getAjaxRoute() + '/api/account/chart';
     xhttp.open('POST', url, true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify({ssid:getSSID()}));
@@ -40,7 +40,7 @@ function getCards () {
         }
     }
 
-    let url = 'http://localhost:3001/api/account/cards';
+    let url =  getAjaxRoute() + '/api/account/cards';
     xhttp.open('POST', url, true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify({ssid:getSSID()}));
@@ -79,7 +79,7 @@ function getTransactions () {
         }   
     }
 
-    let url = 'http://localhost:3001/api/account/transactions';
+    let url =  getAjaxRoute() + '/api/account/transactions';
     xhttp.open('POST', url, true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify({ssid:getSSID()}));
