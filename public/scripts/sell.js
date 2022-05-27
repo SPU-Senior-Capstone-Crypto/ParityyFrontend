@@ -8,7 +8,7 @@ let maxShares;
 
 async function getAccount() {
     accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  }
+}
 
 $("#sharesIn").change( () => {
     if ($('#sharesIn').val() > maxShares){
@@ -59,7 +59,7 @@ $('#sendEth').on('click', () => {
         }
     }
 
-    let url = 'http://localhost:3001/api/transaction';
+    let url =  getAjaxRoute() + '/api/transaction';
     xhttp.open('POST', url, true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify(tx));
@@ -91,7 +91,7 @@ function getProperty () {
     if (params.id){
         id += '/' + params.id;
     }
-    let url = 'http://localhost:3001/api/property' + id;
+    let url =  getAjaxRoute() + '/api/property' + id;
     xhttp.open('GET', url, true) //BUGBUG end point not created and only works for local env.
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send();
@@ -110,7 +110,7 @@ function getShares () {
     if (params.id){
         id += '/' + params.id;
     }
-    let url = 'http://localhost:3001/api/account/shares' + id;
+    let url =  getAjaxRoute() + '/api/account/shares' + id;
     xhttp.open('POST', url, true);
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify({ssid:getSSID()}));

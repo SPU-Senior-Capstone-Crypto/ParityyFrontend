@@ -53,7 +53,7 @@ function log (vars) {
         }
     }
 
-    let url = 'http://localhost:3001/api/account/log';  // login route
+    let url = getAjaxRoute() + '/api/account/log';  // login route
     xhttp.open('POST', url, true);
     xhttp.setRequestHeader('Content-Type', 'application/json');
     xhttp.send(JSON.stringify(vars));
@@ -79,7 +79,7 @@ function register (vars) {
         }
     }
 
-    let url = "http://localhost:3001/api/account/create";
+    let url = getAjaxRoute() + "/api/account/create";
     xhttp.open('PUT', url, true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     console.log(JSON.stringify(vars));
@@ -112,7 +112,7 @@ function deleteCookie () {
 
         let body = {'ssid': ssid}
 
-        let url = 'http://localhost:3001/api/account/logout';
+        let url =  getAjaxRoute() + '/api/account/logout';
 
         xhttp.open('POST', url, true);
         xhttp.setRequestHeader('Content-type', 'application/json');
