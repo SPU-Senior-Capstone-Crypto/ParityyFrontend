@@ -1,23 +1,68 @@
 getProperty();
 
-function getProperty () {
+function getProperty (filter = undefined) {
     console.log("Getting Property")
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.status == 200 && this.readyState == 4){
-            buildPage(JSON.parse(this.responseText)[0]);
+            let a = JSON.parse(this.responseText)
+            if (filter){
+                a = search(a, filter);
+            }
+            for (let i in a) {
+                if (window.location.href.includes('properties')){
+                    buildCard(a[i]);
+                } else {
+                    buildPage(a[i]);
+                }
+                
+            }
         }
         if (this.status == 302 && this.readyState == 4){    // if no/wrong id given reroute to index or search page.
-            location.href = 'index.html';
+            window.location.href = 'index.html';
         }
     }
     let id = '';
-    if (params.id){
-        id += '/' + params.id;
+    if (!window.location.href.toString().includes('properties')){
+        if (params.id){
+            id += '/' + params.id;
+        }
     }
+    
     let url =  getAjaxRoute() + '/api/property' + id;
     xhttp.open('GET', url, true) //BUGBUG end point not created and only works for local env.
     xhttp.send();
+}
+
+function search (a, filter){
+    let r = [];
+
+    // search by name exact
+    for (let i in a){
+        if (a[i].property_name === filter) {
+            r.push(a[i]);
+            return r;
+        }
+    }
+
+    // name includes
+    for (let i in a) {
+        if (a[i].property_name.includes(filter)){
+            r.push(a[i]);
+            delete a[i];
+        }
+    }
+
+    // close to val
+    for (let i in a) {
+        let eth = Number(a[i].value, 16) / 1e18;
+        if (Math.abs(filter - eth) < .01){
+            r.push(a[i]);
+            delete a[i];
+        }
+    }
+    
+    return r;
 }
 
 
