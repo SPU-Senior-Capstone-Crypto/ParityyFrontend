@@ -28,14 +28,13 @@ function getChart () {
 }
 
 function getCards () {
-
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4){
             let res = JSON.parse(this.responseText);
             for (let i in res){
-                buildCard(res[i]);
+                buildCard(res[i], true);
             }
         }
     }
@@ -45,23 +44,6 @@ function getCards () {
     xhttp.setRequestHeader('Content-type', 'application/json');
     xhttp.send(JSON.stringify({ssid:getSSID()}));
 
-}
-
-function buildCard (prop) {
-    const container = $('.cards-container');
-    let meta = JSON.parse(prop.desc_meta);
-    let images = JSON.parse(prop.image_meta);
-    container.append(
-        `<div class="card property" style="width: 18rem;">
-            <img class="card-img-top" src="images/${images.banner}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">${prop.property_name}</h5>
-                <p class="card-text">${meta.summary}</p>
-                <a href="/sell?id=${prop.property_id}" class="btn btn-primary">Sell</a>
-            </div>
-        </div>
-        `
-    );
 }
 
 function getTransactions () {
