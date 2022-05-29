@@ -20,17 +20,17 @@ function buildCard (prop, sellable = false) {
     let meta = JSON.parse(prop.desc_meta);
     let images = JSON.parse(prop.image_meta);
 
-    let p = `<div class="card property" style="width: 18rem;">
+    let p = `<div class="card property" style="width: 18rem; height:430px">
                 <img class="card-img-top" src="images/${images.banner}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">${prop.property_name}<span> ${Number(prop.value) / 1e18}eth</span></h5>
                     <p class="card-text">${meta.summary}</p>
             `;
     if (sellable) {
-        p += `      <a href="/sell?id=${prop.property_id}" class="btn btn-primary">Sell</a>`;
+        p += `      <a href="/sell?id=${prop.property_id}" class="btn btn-light">Sell</a>`;
     }
              
-    p += `          <a href="/property-info?id=${prop.property_id}" class="btn btn-primary">Buy</a>
+    p += `          <a href="/property-info?id=${prop.property_id}" class="btn btn-light">Buy</a>
                 </div>
             </div>
             `;

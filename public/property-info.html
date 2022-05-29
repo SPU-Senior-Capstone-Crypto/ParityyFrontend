@@ -15,10 +15,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
-      <link rel="stylesheet" href="css/prop-info.css">
-      <link rel="stylesheet" href="./css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+    
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">    
+
+
+   <link rel="stylesheet" href="./css/indexStyle.css">
+
+
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -54,79 +66,70 @@
          </div>
      </nav>
 
-      <section class="banner_main">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12 ">
-                  <div class="text-bg">
-                     <!-- Property title -->
-                     <h1></h1>
-
-                     <!-- Address/high level info -->
-                     <p></p>
-                     
-                     <!-- Purchase button w/ price -->
-                     <a id = 'buyBtn' href="#">BUY ME</a>
+     <div class="container-fluid p-0">
+         <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active" id = "banner">
+                     <img class="w-100" src="" alt="Image" style="max-height: 800px;">
+                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 800px;">
+                           <h4 class="text-primary text-uppercase font-weight-normal mb-md-3"></h4>
+                           <h3 class="display-3 text-white mb-md-4" style="stroke: black;"></h3> 
+                        </div>
+                     </div>
                   </div>
                </div>
-            </div>
          </div>
-      </section>
-      <!-- end banner -->
+   </div>
 
 <!-- property images -->
-
-      <!-- three_box -->
-      <div class="three_box">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="box_text">
-                     <figure><img id = "img1" src="" alt="#"/></figure>
-                  </div>
+<div class="container-fluid py-5"> 
+   <div class="container py-5">
+       <div class="row justify-content-center">
+           <div class="col-lg-6 col-md-8 col text-center mb-4">
+               <h1 class="mb-4" id="grabber"></h1>
+           </div>
+       </div>
+       <div class="row mx-1 portfolio-container">
+           <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item first">
+               <div class="position-relative overflow-hidden">
+                   <div class="portfolio-img d-flex align-items-center justify-content-center">
+                       <img class="img-fluid" src="" alt="">
+                   </div>
                </div>
-               <div class="col-md-4">
-                  <div class="box_text">
-                     <figure><img id = "img2" src="" alt="#"/></figure>
-                  </div>
+           </div>
+           <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item second">
+               <div class="position-relative overflow-hidden">
+                   <div class="portfolio-img d-flex align-items-center justify-content-center">
+                       <img class="img-fluid" src="" alt="">
+                   </div>
                </div>
-               <div class="col-md-4">
-                  <div class="box_text">
-                     <figure><img id = "img3" src="" alt="#"/></figure>
-                  </div>
-               </div>
+           </div>
+           <div class="col-lg-4 col-md-6 col-sm-12 p-0 portfolio-item third">
+            <div class="position-relative overflow-hidden">
+                <div class="portfolio-img d-flex align-items-center justify-content-center">
+                    <img class="img-fluid" src="" alt="">
+                </div>
             </div>
+        </div>
+       </div>
+   </div>
+</div>
+
+<div class="container py-5">
+   <div class="row pt-5">
+       <div class="col-lg-8">
+         <div class="mb-5">
+            <h3 class="mb-4" id = "summary">Est dolor lorem et ea</h3>
+            <img class="img-fluid w-50 float-right ml-4 mb-3" id = "blogPic" src="" alt="Image">
+            <p id="desc"></p> 
          </div>
       </div>
-      <!-- three_box -->
-
-
-      <!-- hottest -->
-      <div  class="hottest">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-5">
-                  <div class="titlepage">
-
-                     <!-- Eye grabber -->
-                     <h2></h2>
-                  </div>
-               </div>
-               <div class="col-md-7">
-                  <div class="hottest_box">
-
-
-                     <!-- Info -->
-                     <p></p>
-                  </div>
-               </div>
-            </div>
-         </div>
+      <div class="col">
+         <a class="btn btn-light" id ="buyBtn" style="width:150px" >Buy</a>
       </div>
-      </div>
-      </div>
-      <!-- end hottest -->
-      </div>
+   </div>
+</div>   
       <!-- Javascript files-->
       <script src="./scripts/main.js"></script>   
       <script src='./scripts/retrieveProperty.js'></script>

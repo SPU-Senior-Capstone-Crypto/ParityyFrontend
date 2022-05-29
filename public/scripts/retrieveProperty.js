@@ -76,33 +76,26 @@ function buildPage (payload) {
     // console.log(imgs);
     // console.log(desc);
 
+
     // Set buy button link
     let buyLink = "/purchase?id=" + params.id;
     $("#buyBtn").attr('href', buyLink);
 
     // Set banner back image
-    $(".banner_main").css( 
-        {
-            "background": `url(../images/${imgs.banner})`,
-            'background-repeat': 'no-repeat',
-            'min-height': '840px',
-            'background-size': '100% 100%',
-            'display': 'flex',
-            'justify-content': 'center',
-            'align-content': 'center',
-            'align-items': 'center'
-        });
+    $('#banner .w-100').attr('src', 'images/'+imgs.banner)
 
     //Set images
-    $("#img1").attr('src', "images/"+imgs.img1);
-    $("#img2").attr('src', "images/"+imgs.img2);
-    $("#img3").attr('src', "images/"+imgs.img3);
+    $(".first img").attr('src', "images/"+imgs.img1);
+    $(".second img").attr('src', "images/"+imgs.img2);
+    $(".third img").attr('src', "images/"+imgs.img3);
+    $('#blogPic').attr('src', "images/"+imgs.banner);
 
     //Set all of the wording/titles
-    $("h1").html(desc.title);
-    $(".text-bg p").html(desc.summary);
-    $(".titlepage h2").html(desc.grabber);
-    $(".hottest_box p").html(desc.info);
+    $("#banner h3").html(desc.title);
+    $("#banner h4").html(payload.address);
+    $("#grabber").html(desc.grabber);
+    $('#summary').html(desc.summary);
+    $("#desc").html(desc.info);
 }
 
 function errorRedirect () {

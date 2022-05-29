@@ -15,4 +15,9 @@
 
 .card {
     margin : 10px 20px 10px 20px;
+    height : 360px;
+}
+
+.property .card-img-top {
+    height : 150px;
 }
