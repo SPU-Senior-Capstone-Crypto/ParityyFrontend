@@ -1,6 +1,6 @@
 /* Purchase card styling */
 
-.purchase-container{
+.purchase-container {
     align-self: center;
     width : 40%;
     left:30%;
@@ -12,6 +12,20 @@
 .purchase-container .card-body .row {
     padding-bottom: 30px;
 }
+
+.sell-container {
+    align-self: center;
+    width : 40%;
+    left:30%;
+    right:30%;
+    position: absolute;
+    padding-top: 5%;
+}
+
+.sell-container .card-body .row {
+    padding-bottom: 30px;
+}
+
 
 span {
     font-size: 9px;

@@ -28,7 +28,7 @@ $("#gas").change( () => {
 function updatePricing () {
     let numShares = $("#sharesIn").val();
     $("#estGas").html(`Est. Gas fee: ${Number($("#gas").val())}`);  // Output gas est
-    $('#estOut p').html(`Est. Price: <u>${(Number(pricePerShare) * numShares / 1e18).toFixed(2)}`);    // output total est
+    $('#estOut p').html(`Est. Price: <u>${(Number(pricePerShare) * numShares / 1e18).toFixed(4)}`);    // output total est
     if (numShares <= 0){
         $("#sendEth").attr('disabled', true);
     } else {
@@ -90,7 +90,7 @@ function getProperty () {
 function buildPage (payload) {
     console.log(payload);
     pricePerShare = payload.value;
-    $("#priceOut").html(`Price per Share<br><strong>${payload.value}</strong> eth`);
+    $("#priceOut").html(`Price per Share<br><strong>${Number(payload.value) / 1e18}</strong> eth`);
 }
 // ** CREATE TRANSACTION **
 //Sending Ethereum to an address
@@ -229,7 +229,7 @@ $("#sendEth").on('click', () => {
   function configWEI() {
     let shares = $("#sharesIn").val()
     // converts to WEI
-    let result = shares * 1e18 * pricePerShare;
+    let result = shares * Number(pricePerShare);
     // converts to hex
     let hxResult = result.toString(16);
     return(hxResult);

@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap'); 
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
@@ -14,7 +14,7 @@
 
 /*--------------------------------------------------------------------- import Files ---------------------------------------------------------------------*/
 
-/* @import url(animate.min.css);
+@import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
 @import url(font-awesome.min.css);
@@ -24,7 +24,7 @@
 @import url(slick.css);
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
-@import url(nice-select.css); */
+@import url(nice-select.css);
 
 /*--------------------------------------------------------------------- skeleton ---------------------------------------------------------------------*/
 
@@ -311,45 +311,45 @@ ul.btn li:last-child {
 
 /*-- navigation--*/
 
-.navigation.navbar {
+/* .navigation.navbar {
      float: right;
      padding-top: 15px !important;
      padding: 0;
-}
+} */
 
-.navigation.navbar-dark .navbar-nav .nav-link {
+/* .navigation.navbar-dark .navbar-nav .nav-link {
      padding: 0px 25px;
      text-transform: uppercase;
      color: #fff;
      font-size: 17px;
      line-height: 20px;
-}
+} */
 
-.navigation.navbar-dark .navbar-nav .nav-link:focus,
+/* .navigation.navbar-dark .navbar-nav .nav-link:focus,
 .navigation.navbar-dark .navbar-nav .nav-link:hover {
      color: #f4cb1e;
-}
+} */
 
-.navigation.navbar-dark .navbar-nav .active>.nav-link,
+/* .navigation.navbar-dark .navbar-nav .active>.nav-link,
 .navigation.navbar-dark .navbar-nav .nav-link.active,
 .navigation.navbar-dark .navbar-nav .nav-link.show,
 .navigation.navbar-dark .navbar-nav .show>.nav-link {
      color: #f4cb1e;
-}
+} */
 
-.navbar-expand-md .navbar-nav {
+/* .navbar-expand-md .navbar-nav {
      padding-right: 10px;
-}
+} */
 
-.padd_right {
+/* .padd_right {
      padding-right: 10px;
-}
+} */
 
-.sign_btn {
+/* .sign_btn {
      padding-left: 50px;
-}
+} */
 
-.get_btn a {
+/* .get_btn a {
      display: inline-block;
      padding: 8px 39px;
      color: #fff;
@@ -358,27 +358,27 @@ ul.btn li:last-child {
      text-transform: uppercase;
      margin-top: -10px;
      margin-left: 30px;
-}
+} */
 
-.get_btn a:hover {
+/* .get_btn a:hover {
      color: #fff;
      background-color: #d2d1d6;
-}
+} */
 
-.header {
+/* .header {
      width: 100%;
      padding: 30px 30px;
      border-bottom: #c6cad5 solid 12px;
      background-color: #13110e;
-}
+} */
 
-.logo {
+/* .logo {
      position: relative;
      padding-left: 50%;
      padding-top: 6px;
-}
+} */
 
-.logo::after {
+/* .logo::after {
      position: absolute;
      content: "";
      width: 136px;
@@ -388,7 +388,7 @@ ul.btn li:last-child {
      background: url(../images/top_head.png);
      background-repeat: no-repeat;
      border-right: #c6cad5 solid 15px;
-}
+} */
 
 
 /** banner section **/
