@@ -58,7 +58,12 @@ function buildCard (prop, sellable = false) {
         'color' : 'lightgrey'
     }).on('click', () => {
         deleteCookie();
-    })
+    });
+    $('#propBtn').css(
+        {
+            'display':'grid'
+        }
+    );
 }
 
 function noLogDisplay () {
