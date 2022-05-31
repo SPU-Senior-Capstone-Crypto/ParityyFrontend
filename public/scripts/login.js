@@ -1,10 +1,4 @@
 
-if (getSSID > 0){
-    loggedInDisplay();
-} else {
-    noLogDisplay();
-}
-
 // handler for signup form.
 $(document).ready( () => {
     $('#input-form').submit( (e) => {
