@@ -3,7 +3,7 @@ $(function(){
     $("#nav-placeholder").load("/components/nav.html", () => {
         if (getSSID() > 0){
             $('#accountBtn').html(
-                '<a href="profile.html">Account</a>'
+                '<a href="profile.html" style="color: white">Account</a>'
                 );
             $('#accountOptionBtn').html(
                 'Logout'
