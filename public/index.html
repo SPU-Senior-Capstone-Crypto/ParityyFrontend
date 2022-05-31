@@ -31,40 +31,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: black">
-        <a class="navbar-brand" href="/" style="color: #fefefe; font-size: x-large;"> Parityy </a>
-        <div class='collapse navbar-collapse'>
-            <ul class="navbar-nav mr-auto">
-                <li class="'nav-item active">
-                    <!-- <a class="nav-link" href="/properties" style="color: #fefefe;">Properties</a> -->
-                </li>
-            </ul>
-             <span class='nav-item'>
-                <Link class= "nav-link" > 
-                    <button id="propBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1; color : white; display:none">
-                        <a href="/properties">Properties</a>
-                    </button>
-                </Link>
-            </span>
-            <span style="margin-right: 2px"></span>
-            <span class='nav-item'>
-                <Link class= "nav-link"> 
-                    <button id = "accountBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
-                        <a href="/login">Login</a>
-                    </button>
-                </Link>
-            </span>
-            <span style="margin-right: 2px"></span>
-            <span class='nav-item'>
-                <Link class= "nav-link" > 
-                    <button id = "accountOptionBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
-                        <a href="/signup">Sign up</a>
-                    </button>
-                </Link>
-            </span>
-        </div>
-    </nav>
-    <!-- Topbar End -->
+    <!-- Navigation Bar -->
+    <div id="nav-placeholder"></div>
+    <!-- Navigation Bar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
@@ -390,4 +359,7 @@
     <script src="./scripts/index.js"></script>
     <script src="./scripts/login.js"></script>
 
+    <!-- Load Components -->
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/nav.js"></script>
 </html>
