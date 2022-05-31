@@ -1,6 +1,8 @@
 const urlParameters = new URLSearchParams(window.location.search);
 const params = {};
 
+checkMM();
+
 function getAjaxRoute () {
     return 'http://137.184.114.83:3001';
 }
@@ -36,6 +38,28 @@ function buildCard (prop, sellable = false) {
             `;
 
     container.append(p);
+}
+
+function checkMM () {
+    if (!window.ethereum){  // needs to install/connect metamask
+        let m = `   MetaMask is not installed. Please <a href="https://metamask.io/download/">install here</a>.
+                    
+        `
+        notify(m)
+        return false;
+    }
+    return true; 
+}
+
+function notify (m) {
+
+    let alert = `<div class="alert alert-warning" role="alert" style="position:absolute;z-index:2; margin:1% 2% 1% 80%">
+                    ${m}
+                </div>`
+
+    $('nav').after(
+        alert
+    );
 }
 
 /**

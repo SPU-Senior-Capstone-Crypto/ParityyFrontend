@@ -50,6 +50,8 @@ function log (vars) {
             if (getSSID() > 0){
                 window.location.href = "/";
             }
+        } else if (this.status == 502) {
+            notify('Invalid Login Credentials.')
         }
     }
 
@@ -126,9 +128,15 @@ function deleteCookie () {
  */
 function getSSID () {
     if (document.cookie){
-        return (document.cookie.split('; ') 
+         let c = (document.cookie.split('; ') 
         .find(row => row.startsWith('ssid='))
         .split('=')[1]);
+
+        if (isNaN(c)){
+            return -1;
+        } else {
+            return c;
+        }
     } else {
         return -1;
     }
