@@ -7,7 +7,12 @@ function getProperty (filter = undefined) {
         if (this.status == 200 && this.readyState == 4){
             let a = JSON.parse(this.responseText)
             if (filter){
-                a = search(a, filter);
+                a = search(a, filter.toUpperCase());
+            }
+            if (a.length == 0){
+                $('.cards-container').append(
+                    `<h2>No Results Found :(</h2>`
+                )
             }
             for (let i in a) {
                 if (window.location.href.includes('properties')){
@@ -39,7 +44,7 @@ function search (a, filter){
 
     // search by name exact
     for (let i in a){
-        if (a[i].property_name === filter) {
+        if (a[i].property_name.toUpperCase() === filter) {
             r.push(a[i]);
             return r;
         }
@@ -47,7 +52,7 @@ function search (a, filter){
 
     // name includes
     for (let i in a) {
-        if (a[i].property_name.includes(filter)){
+        if (a[i].property_name.toUpperCase().includes(filter)){
             r.push(a[i]);
             delete a[i];
         }
@@ -56,7 +61,7 @@ function search (a, filter){
     // close to val
     for (let i in a) {
         let eth = Number(a[i].value, 16) / 1e18;
-        if (Math.abs(filter - eth) < .01){
+        if (Math.abs(Number(filter) - eth) < .01){
             r.push(a[i]);
             delete a[i];
         }

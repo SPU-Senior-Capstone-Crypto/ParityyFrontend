@@ -49,6 +49,11 @@
 
 <script src="./scripts/main.js"></script>
 <script src="./scripts/login.js"></script>
+<script>
+    if (getSSID() > 0){
+        window.location.href = '/';
+    }
+</script>
 
 
 </body>
