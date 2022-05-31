@@ -142,6 +142,11 @@
       <script src="./scripts/main.js"></script>   
       <script src='./scripts/retrieveProperty.js'></script>
       <script src="./scripts/login.js"></script>
+      <script>
+          if (!params.id){
+              window.location.href = '/properties'
+          }
+      </script>
    </body>
 </html>
 
