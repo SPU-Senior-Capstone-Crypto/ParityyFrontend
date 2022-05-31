@@ -6,14 +6,21 @@
     <title>Parityy</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 
     <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -27,44 +34,13 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="./css/indexStyle.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: black">
-        <a class="navbar-brand" href="/" style="color: #fefefe; font-size: x-large;"> Parityy </a>
-        <div class='collapse navbar-collapse'>
-            <ul class="navbar-nav mr-auto">
-                <li class="'nav-item active">
-                    <!-- <a class="nav-link" href="/properties" style="color: #fefefe;">Properties</a> -->
-                </li>
-            </ul>
-             <span class='nav-item'>
-                <Link class= "nav-link" > 
-                    <button id="propBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1; color : white; display:none">
-                        <a href="/properties">Properties</a>
-                    </button>
-                </Link>
-            </span>
-            <span style="margin-right: 2px"></span>
-            <span class='nav-item'>
-                <Link class= "nav-link"> 
-                    <button id = "accountBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
-                        <a href="/login">Login</a>
-                    </button>
-                </Link>
-            </span>
-            <span style="margin-right: 2px"></span>
-            <span class='nav-item'>
-                <Link class= "nav-link" > 
-                    <button id = "accountOptionBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
-                        <a href="/signup">Sign up</a>
-                    </button>
-                </Link>
-            </span>
-        </div>
-    </nav>
-    <!-- Topbar End -->
+    <!-- Navigation Bar -->
+    <div id="nav-placeholder"></div>
+    <!-- Navigation Bar End -->
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0">
@@ -76,7 +52,7 @@
                         <div class="p-3" style="max-width: 800px;">
                             <h4 class="text-primary text-uppercase font-weight-normal mb-md-3">Parityy</h4>
                             <h3 class="display-3 text-white mb-md-4">Fly to Your Financial Freedom</h3>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -90,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev"> 
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
                 <div class="btn btn-primary" style="width: 45px; height: 45px;">
                     <span class="carousel-control-prev-icon mb-n2"></span>
                 </div>
@@ -110,16 +86,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center bg-primary h-100 py-5 px-3" >
-                    
-                        <h4 class="display-3 mb-3"style="color: #fefefe;">25</h4>
+                    <div
+                        class="d-flex flex-column align-items-center justify-content-center bg-primary h-100 py-5 px-3">
+
+                        <h4 class="display-3 mb-3" style="color: #fefefe;">25</h4>
                         <h1 class="m-0" style="color: #fefefe;">Software Engineering</h1>
                     </div>
                 </div>
                 <div class="col-lg-7 m-0 my-lg-5 pt-5 pb-5 pb-lg-2 pl-lg-5">
                     <h6 class="text-primary font-weight-normal text-uppercase mb-3">Learn About Us</h6>
                     <h1 class="mb-4 section-title">We Class </h1>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
+                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
+                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
+                        dolor</p>
                     <div class="row py-2">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center mb-4">
@@ -161,14 +140,15 @@
                     <h6 class="text-primary font-weight-normal text-uppercase mb-3">Our Properties</h6>
                     <h1 class="mb-4">Some Of Our Awesome Properties</h1>
 
-                    <button id = "accountBtn" type="button" class="btn btn-light" style="background-color: #6f42c1; border-color: #6f42c1">
+                    <button id="accountBtn" type="button" class="btn btn-light"
+                        style="background-color: #6f42c1; border-color: #6f42c1">
                         <a href="properties.html">View More Properties</a>
 
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
-                    
+
                 </div>
             </div>
             <div class="row mx-1 portfolio-container">
@@ -177,13 +157,15 @@
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="images/b3-img2.jpeg" alt="">
                         </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            
+                        <div
+                            class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-outline-primary m-1" href="properties.html" style="color: white; border-color: white;">
                                     <i class="fa fa-link" ></i>
                                 </a>
                                 <a class="btn btn-outline-primary m-1" href="images/b3-img2.jpeg" data-lightbox="portfolio"style="color: white; border-color: white;">
+
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>
@@ -195,13 +177,15 @@
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="images/b2-img2.webp" alt="">
                         </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            
+                        <div
+                            class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-outline-primary m-1" href="properties.html" style="color: white; border-color: white;">
                                     <i class="fa fa-link"></i>
                                 </a>
                                 <a class="btn btn-outline-primary m-1" href="images/b2-img2.webp" data-lightbox="portfolio" style="color: white; border-color: white;">
+
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>
@@ -213,13 +197,15 @@
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="images/portfolio-3.jpg" alt="">
                         </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            
+                        <div
+                            class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-outline-primary m-1" href="properties.html" style="color: white; border-color: white;">
                                     <i class="fa fa-link"></i>
                                 </a>
                                 <a class="btn btn-outline-primary m-1" href="images/portfolio-3.jpg" data-lightbox="portfolio" style="color: white; border-color: white;">
+
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>
@@ -231,13 +217,15 @@
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="images/portfolio-4.jpg" alt="">
                         </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            
+                        <div
+                            class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-outline-primary m-1" href="properties.html" style="color: white; border-color: white;">
                                     <i class="fa fa-link"></i>
                                 </a>
                                 <a class="btn btn-outline-primary m-1" href="images/portfolio-4.jpg" data-lightbox="portfolio" style="color: white; border-color: white;">
+
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>
@@ -249,13 +237,15 @@
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="images/portfolio-5.jpg" alt="">
                         </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            
+                        <div
+                            class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-outline-primary m-1" href="properties.html" style="color: white; border-color: white;">
                                     <i class="fa fa-link"></i>
                                 </a>
                                 <a class="btn btn-outline-primary m-1" href="images/portfolio-5.jpg" data-lightbox="portfolio" style="color: white; border-color: white;">
+
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>
@@ -267,13 +257,15 @@
                         <div class="portfolio-img d-flex align-items-center justify-content-center">
                             <img class="img-fluid" src="images/b3-banner.jpeg" alt="">
                         </div>
-                        <div class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
-                            
+                        <div
+                            class="portfolio-text bg-secondary d-flex flex-column align-items-center justify-content-center">
+
                             <div class="d-flex align-items-center justify-content-center">
                                 <a class="btn btn-outline-primary m-1" href="properties.html" style="color: white; border-color: white;">
                                     <i class="fa fa-link"></i>
                                 </a>
                                 <a class="btn btn-outline-primary m-1" href="images/b3-banner.jpeg" data-lightbox="portfolio" style="color: white; border-color: white;">
+
                                     <i class="fa fa-eye"></i>
                                 </a>
                             </div>
@@ -293,6 +285,7 @@
                 <div class="col-md-4 col-sm-6" style="background-color: black;">
                     <div class="py-5 px-4 h-100 bg-primary d-flex flex-column align-items-center justify-content-center" style="background-color: black">
                         <h6 class="text-white font-weight-normal text-uppercase mb-3">Team</h6>
+
                         <h1 class="mb-0 text-center" style="color:white ;">Meet Our Team Members</h1>
                     </div>
                 </div>
@@ -304,6 +297,7 @@
                                 <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                                     <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;border-color: #fefefe; color: #fefefe;" href="https://github.com/imathno"><i class="fab fa-github"></i></a>
                                     <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;border-color: #fefefe; color: #fefefe;" href="https://www.linkedin.com/in/imathno/"><i class="fab fa-linkedin-in"></i></a>
+
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-secondary text-center py-3">
@@ -317,6 +311,7 @@
                                 <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                                     <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;border-color: #fefefe; color: #fefefe;" href="https://github.com/mercyy-maker"><i class="fab fa-github"></i></a>
                                     <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;border-color: #fefefe; color: #fefefe;" href="https://www.linkedin.com/in/mercy-lelago/"><i class="fab fa-linkedin-in"></i></a>
+
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-secondary text-center py-3">
@@ -343,6 +338,7 @@
                                 <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
                                     <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;border-color: #fefefe; color: #fefefe;" href="https://github.com/rgraue"><i class="fab fa-github"></i></a>
                                     <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;border-color: #fefefe; color: #fefefe;" href="https://www.linkedin.com/in/ryan-graue-2795241b7/"><i class="fab fa-linkedin-in"></i></a>
+
                                 </div>
                             </div>
                             <div class="d-flex flex-column bg-secondary text-center py-3">
@@ -360,33 +356,25 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5" >
-        <div class="row pt-5" style="text-align: center;" >
-            <div class="col"></div> 
-            <div class="col-lg-3 col-md-6 mb-5" >
-                <h4 class="text-primary mb-4" >Contact Us</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>3469 3rd Ave W, Seattle,WA 98119 </p>
-                <p><i class="fa fa-phone-alt mr-2">(509)659-2905</i></p>
-                <p><i class="fa fa-envelope mr-2"></i>parityy@parityy.com</p>
-            </div>
-            <div class="col"></div> 
-        </div>
-    </div>
-    
+
+    <div id="footer-placeholder"></div>
     <!-- Footer End -->
 
 
-    
+
 </body>
 <!-- JavaScript Libraries -->
 
-    <!-- <script src="lib/easing/easing.min.js"></script> -->
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <!-- <script src="lib/isotope/isotope.pkgd.min.js"></script> -->
+<!-- <script src="lib/easing/easing.min.js"></script> -->
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<!-- <script src="lib/isotope/isotope.pkgd.min.js"></script> -->
 
-    <!-- Template Javascript -->
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/index.js"></script>
-    <script src="./scripts/login.js"></script>
+<!-- Load Components -->
+<script src="./scripts/footer.js"></script>
+<script src="./scripts/nav.js"></script>
+<script src="./scripts/main.js"></script>
+<script src="./scripts/index.js"></script>
+<script src="./scripts/login.js"></script>
+
 
 </html>

@@ -3,9 +3,9 @@
 if (getSSID() < 0){
     window.location.href = '/login'
 } else {
-    getChart();
     getCards();
     getTransactions();
+    getChart();
 }
 
 function getChart () {
@@ -18,7 +18,10 @@ function getChart () {
             const chart = new Chart(ctx, JSON.parse(this.responseText));
             let points = JSON.parse(this.responseText).data.datasets[0].data
             $('#balanceCol-title span').html(`${points[points.length - 1]}`)
-        }
+        } else if (this.status == 502 && this.readyState == 4) {
+                $('#balanceCol-title span').html('0');
+                noTrans();
+            }
     }
 
     let url =  getAjaxRoute() + '/api/account/chart';
@@ -106,6 +109,21 @@ function buildTransaction (t) {
                 </div>
             </div>
         </div>
+        `
+    )
+}
+
+function noTrans() {
+    $('.chart-container').remove();
+    $('.cards-container').remove();
+    $('.list-container').remove();
+
+    $('.header-container').after(
+        `
+            <div style="text-align:center;margin-top:12%;margin-bottom:10%;">
+                <h2>Looks like you are new here</h2>
+                <p>Start buying properties <a href="/properties">here</a></p>
+            </div>
         `
     )
 }

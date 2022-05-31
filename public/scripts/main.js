@@ -1,6 +1,8 @@
 const urlParameters = new URLSearchParams(window.location.search);
 const params = {};
 
+checkMM();
+
 function getAjaxRoute () {
     return 'http://137.184.114.83:3001';
 }
@@ -38,47 +40,24 @@ function buildCard (prop, sellable = false) {
     container.append(p);
 }
 
-/**
- * displays propper UI if logged in
- * @returns void
- */
- function loggedInDisplay () {
-    if (getSSID() < 0 ){
-        noLogDisplay();
-        return;
+function checkMM () {
+    if (!window.ethereum){  // needs to install/connect metamask
+        let m = `   MetaMask is not installed. Please <a href="https://metamask.io/download/">install here</a>.
+                    
+        `
+        notify(m)
+        return false;
     }
-    $('#accountBtn').html(
-        '<a href="profile.html">Account</a>'
-        );
-    $('#accountOptionBtn').html(
-        'Logout'
-    ).css({
-        'background-color': 'black',
-        'border-color' : 'black',
-        'color' : 'lightgrey'
-    }).on('click', () => {
-        deleteCookie();
-    });
-    $('#propBtn').css(
-        {
-            'display':'grid'
-        }
-    );
+    return true; 
 }
 
-function noLogDisplay () {
-    if (getSSID() > 0){
-        loggedInDisplay()
-        return;
-    }
-    $('#accountBtn').html(
-        '<a href="login.html">Login</a>'
+function notify (m) {
+
+    let alert = `<div class="alert alert-warning" role="alert" style="position:absolute;z-index:2; margin:1% 2% 1% 80%">
+                    ${m}
+                </div>`
+
+    $('nav').after(
+        alert
     );
-    $('#accountOptionBtn').html(
-        '<a href="signup.html">Sign up</a>'
-    ).css({
-        'background-color' : '#6f42c1',
-        'border-color' : '#6f42c1',
-        'color' : 'black'
-    }).on('click', () => {return})
 }
