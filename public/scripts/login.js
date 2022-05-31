@@ -32,7 +32,6 @@ $(document).ready( () => {
  * @param {object} vars login paramaters for req body
  */
 function log (vars) {
-    notify("login");
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4){
@@ -43,7 +42,7 @@ function log (vars) {
             }
         }
         if (this.status == 404){
-            console.log("No login")
+            notify("No account with given credentials")
         }
     }
 

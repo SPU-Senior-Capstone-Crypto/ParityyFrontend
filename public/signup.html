@@ -21,51 +21,52 @@
 
 </head>
 <body style="background: #fefefe">
+    <div id="nav-placeholder"></div>
 
-<div class="signup">
-    <img src="../images/Logo.png" alt="Snow" style="width:100%; height: 25%; margin-left: 35px" >
-    <h1 style="font-family: Rokkitt; margin-left: 150px; font-size: 30px">Sign Up</h1>
-    <img src="../images/Vector.png" alt="Snow" style="width:50%; height: 1%; margin-left: 100px; margin-bottom: 20px">
-         <br>
+    <div class="signup">
+        <img src="../images/Logo.png" alt="Snow" style="width:100%; height: 25%; margin-left: 35px" >
+        <h1 style="font-family: Rokkitt; margin-left: 150px; font-size: 30px">Sign Up</h1>
+        <img src="../images/Vector.png" alt="Snow" style="width:50%; height: 1%; margin-left: 100px; margin-bottom: 20px">
+            <br>
 
-    <form id="input-form">
-        <label for="firstname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> First Name:</label>
-        <input id = "firstname" type="text" name="name" placeholder="Enter First Name" required>
+        <form id="input-form">
+            <label for="firstname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> First Name:</label>
+            <input id = "firstname" type="text" name="name" placeholder="Enter First Name" required>
 
-        <label for="lastname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> Last Name:</label>
-        <input id = "lastname" type="text" name="name" placeholder="Enter Last name" required>
+            <label for="lastname" style="margin-top: 2px"> <i class="fa fa-user" aria-hidden="true"></i> Last Name:</label>
+            <input id = "lastname" type="text" name="name" placeholder="Enter Last name" required>
 
-        <label for="email" style="margin-top: 2px"> <i class="fa fa-envelope" aria-hidden="true"></i> Email:</label>
-        <input id = "email" type="email" name="email" placeholder="Enter Email" required>
+            <label for="email" style="margin-top: 2px"> <i class="fa fa-envelope" aria-hidden="true"></i> Email:</label>
+            <input id = "email" type="email" name="email" placeholder="Enter Email" required>
 
-        <label for="password" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Password:</label>
-        <input id="password" type="password" name="pass" placeholder="Enter Password" required ><br>
+            <label for="password" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Password:</label>
+            <input id="password" type="password" name="pass" placeholder="Enter Password" required ><br>
 
-        <label for="reenterpass" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Re-enter Password:</label>
-        <input id="reenterpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
+            <label for="reenterpass" style="margin-top: 2px"> <i class="fa fa-key" aria-hidden="true"></i> Re-enter Password:</label>
+            <input id="reenterpass" type="password" name="confirmpass" placeholder="Confirm Password" required><br>
 
-        <button class="button" type="submit" id ="registerBtn" style="background-color: #6f42c1">Register Account</button><br>
+            <button class="button" type="submit" id ="registerBtn" style="background-color: #6f42c1">Register Account</button><br>
 
-        <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="login.html">Sign in</a></p>
-    </form>
+            <p style="color: black; font-weight: normal;" class="p">Already have an account? <a href="login.html">Sign in</a></p>
+        </form>
 
-</div>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
 
-<script src="./scripts/main.js"></script>
-<script src="./scripts/login.js"></script>
-<script>
-    if (getSSID() > 0){
-        window.location.href = '/';
-    }
-</script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/login.js"></script>
+    <script>
+        if (getSSID() > 0){
+            window.location.href = '/';
+        }
+    </script>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ function getChart () {
  
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4){
+            console.log(JSON.parse(this.responseText));
             const chart = new Chart(ctx, JSON.parse(this.responseText));
             let points = JSON.parse(this.responseText).data.datasets[0].data
             $('#balanceCol-title span').html(`${points[points.length - 1]}`)

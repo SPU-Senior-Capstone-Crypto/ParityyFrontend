@@ -42,8 +42,7 @@ function buildCard (prop, sellable = false) {
 
 function checkMM () {
     if (!window.ethereum){  // needs to install/connect metamask
-        let m = `   MetaMask is not installed. Please <a href="https://metamask.io/download/">install here</a>.
-                    
+        let m = `   MetaMask is not installed. Please <a href="https://metamask.io/download/">install here</a>.        
         `
         notify(m)
         return false;
@@ -57,7 +56,7 @@ function notify (m) {
                     ${m}
                 </div>`
 
-    $('nav').after(
+    $('#nav-placeholder').after(
         alert
     );
 }
