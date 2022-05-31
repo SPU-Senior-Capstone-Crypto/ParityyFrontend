@@ -1780,7 +1780,7 @@ pre code {
 
 .table .thead-dark th {
   color: #fff;
-  background-color: #343a40;
+  background-color: black;
   border-color: #454d55;
 }
 
@@ -1792,7 +1792,7 @@ pre code {
 
 .table-dark {
   color: #fff;
-  background-color: #343a40;
+  background-color: black;
 }
 
 .table-dark th,
