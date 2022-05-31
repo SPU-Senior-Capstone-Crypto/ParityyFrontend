@@ -32,11 +32,8 @@ $(document).ready( () => {
  * @param {object} vars login paramaters for req body
  */
 function log (vars) {
+    notify("login");
     let xhttp = new XMLHttpRequest();
-
-    // TODO
-    // handle wrong login info
-    // reroute success
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4){
             console.log(this.responseText);
@@ -44,8 +41,9 @@ function log (vars) {
             if (getSSID() > 0){
                 window.location.href = "/";
             }
-        } else if (this.status == 502) {
-            notify('Invalid Login Credentials.')
+        }
+        if (this.status == 404){
+            console.log("No login")
         }
     }
 
@@ -69,9 +67,11 @@ function register (vars) {
     // handle existing user
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4){
-            console.log("good")
+            notify("Successful Registration");
+            setTimeout(() => {}, 500);
+            window.location.href = '/'
         } else {
-            console.log(this.status)
+            notify("Unable to create user");
         }
     }
 
