@@ -143,6 +143,7 @@ $("#sendEth").on('click', () => {
         true
       ]
     }).then((result) => {
+      console.log(result);
       // find contract with mathing block# and sender
       for (let i in result.transactions){
           if (result.transactions[i].from === s){

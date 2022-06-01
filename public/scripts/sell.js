@@ -44,6 +44,7 @@ $('#sendEth').on('click', () => {
     xhttp.onreadystatechange = function () {
         if (this.status == 200 && this.readyState == 4){
             let response = JSON.parse(this.responseText);
+            console.log(response);
             
             let hash = response.hash
             let hashStr = hash.toString();
