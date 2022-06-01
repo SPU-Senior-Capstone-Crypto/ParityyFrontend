@@ -38,7 +38,6 @@ function log (vars) {
             console.log(this.responseText);
             createLoginCookie(this.responseText);
             if (getSSID() > 0){
-                console.log("hit");
                 window.location.href = "/";
             }
         }
